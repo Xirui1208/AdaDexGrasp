@@ -1,0 +1,78 @@
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+
+# Python environments and packaging
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+env/
+ENV/
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Native/CUDA build products
+*.so
+*.dylib
+*.dll
+*.o
+*.obj
+!dexgrasp/tasks/tacsl_sensors/examples/assets/**/*.obj
+*.a
+*.lib
+*.cu.o
+
+# Logs and experiment tracking
+*.log
+wandb/
+runs/
+outputs/
+multirun/
+.hydra/
+/tensorboard/
+
+# Model checkpoints and exported models
+*.pth
+*.pt
+*.ckpt
+*.onnx
+checkpoints/
+
+# Generated training data
+*.zarr/
+/dexgrasp/DATA/
+/dexgrasp/ECCV/
+Diffusion_Policy_3D/data/
+
+# Project-generated model outputs and statistics
+gen_map/logs/
+gen_pose/logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.orig
+*.pid
+core.*

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f7f3" />
+    <meta
+      name="description"
+      content="AdaDexGrasp: Adaptive Dexterous Grasping via 3D Visuo-Tactile Representation Fusion. ECCV 2026."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="AdaDexGrasp | ECCV 2026" />
+    <meta
+      property="og:description"
+      content="Adaptive Dexterous Grasping via 3D Visuo-Tactile Representation Fusion."
+    />
+    <meta
+      property="og:url"
+      content="https://xirui1208.github.io/AdaDexGrasp/"
+    />
+    <meta
+      property="og:image"
+      content="https://xirui1208.github.io/AdaDexGrasp/public/og.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AdaDexGrasp | ECCV 2026" />
+    <meta
+      name="twitter:description"
+      content="Adaptive Dexterous Grasping via 3D Visuo-Tactile Representation Fusion."
+    />
+    <meta
+      name="twitter:image"
+      content="https://xirui1208.github.io/AdaDexGrasp/public/og.png"
+    />
+    <link rel="canonical" href="https://xirui1208.github.io/AdaDexGrasp/" />
+    <link rel="icon" href="./public/favicon.svg?v=3" type="image/svg+xml" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>AdaDexGrasp: Adaptive Dexterous Grasping via 3D Visuo-Tactile Representation Fusion</title>
+  </head>
+  <body>
+    <main id="top">
+      <section class="hero" aria-labelledby="paper-title">
+        <h1 id="paper-title">
+          <strong>AdaDexGrasp</strong>
+          <span>Adaptive Dexterous Grasping via</span>
+          <span>3D Visuo-Tactile Representation&nbsp;Fusion</span>
+        </h1>
+        <p class="venue">ECCV 2026</p>
+
+        <p class="authors" aria-label="Authors">
+          <span>Xirui Liang¹,</span>
+          <span>Jiaqi Liang¹*,</span>
+          <span>Jingkai Xu¹*,</span>
+          <span>Yuran Wang¹*,</span>
+          <span>Ruochong Li²,</span>
+          <span>Yuanpei Chen¹,</span>
+          <span>Masayoshi Tomizuka³,</span>
+          <span>Wei Zhan³,</span>
+          <span>Ruihai Wu³†</span>
+        </p>
+        <p class="affiliations">
+          <span>¹ Peking University</span>
+          <span>² HKUST</span>
+          <span>³ UC Berkeley</span>
+        </p>
+        <p class="author-notes">* Equal contribution · † Corresponding author</p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://arxiv.org/abs/2608.07600">
+            Read the paper <span aria-hidden="true">↗</span>
+          </a>
+          <a class="button button-secondary" href="https://github.com/Xirui1208/AdaDexGrasp">
+            View code <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="content-section video-section" id="video" aria-label="Demo video">
+        <div class="video-shell">
+          <video
+            controls
+            playsinline
+            preload="none"
+            poster="./public/media/video_poster.jpg"
+            width="1280"
+            height="714"
+            aria-label="AdaDexGrasp demo video"
+          >
+            <source src="./public/media/video.mp4" type="video/mp4" />
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+      </section>
+
+      <section class="content-section media-section" id="overview">
+        <header class="section-heading">
+          <h2>Overview</h2>
+        </header>
+        <figure class="paper-figure">
+          <img
+            src="./public/media/teaser.png"
+            width="1856"
+            height="510"
+            alt="AdaDexGrasp generates an initial contact-aware grasp and adapts failed grasps using visuo-tactile feedback."
+          />
+        </figure>
+      </section>
+
+      <section class="content-section media-section" id="method">
+        <header class="section-heading">
+          <h2>Method</h2>
+        </header>
+
+        <div class="visual-stack">
+          <article class="visual-block">
+            <h3 class="subsection-title">Pipeline</h3>
+            <figure class="paper-figure">
+              <img
+                src="./public/media/Pipeline.png"
+                width="2000"
+                height="1125"
+                alt="AdaDexGrasp pipeline from object point cloud through contact map and grasp generation to tactile classification and pose adaptation."
+              />
+            </figure>
+          </article>
+
+          <article class="visual-block">
+            <h3 class="subsection-title">Model Architecture</h3>
+            <figure class="paper-figure">
+              <img
+                src="./public/media/DexTactile_Model.png"
+                width="2000"
+                height="1125"
+                alt="Network architecture for contact-driven pose generation, grasp classification, and diffusion-based pose adaptation."
+              />
+            </figure>
+          </article>
+
+          <article class="visual-block">
+            <h3 class="subsection-title">Contact-Driven Grasp Pose Generator</h3>
+            <figure class="paper-figure initial-pose-crop">
+              <img
+                src="./public/media/Initial_Pose_Results.png"
+                width="2000"
+                height="1125"
+                alt="Initial grasp generation results in simulation and the real world."
+              />
+            </figure>
+          </article>
+
+          <article class="visual-block">
+            <h3 class="subsection-title">Grasp Pose Adaptation Model</h3>
+            <figure class="paper-figure">
+              <img
+                src="./public/media/Adaptation_Results.png"
+                width="1633"
+                height="971"
+                alt="Failed initial grasps refined into successful grasps in simulation and the real world."
+              />
+            </figure>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section media-section" id="experiments">
+          <header class="section-heading">
+            <h2>Experiments</h2>
+          </header>
+
+          <div class="visual-stack experiment-stack">
+            <article class="visual-block">
+              <h3 class="subsection-title">Baseline Comparison</h3>
+              <div class="results-table-wrap">
+                <table class="results-table" aria-label="Baseline comparison success rates">
+                  <thead>
+                    <tr>
+                      <th scope="col">Method</th>
+                      <th scope="col">Seen Objects</th>
+                      <th scope="col">Unseen Objects</th>
+                      <th scope="col">Unseen Categories</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><th scope="row">UniDexGrasp++</th><td>55%</td><td>49%</td><td>42%</td></tr>
+                    <tr><th scope="row">DexGraspAnything</th><td>77%</td><td>72%</td><td>67%</td></tr>
+                    <tr><th scope="row">DexDiffuser</th><td>71%</td><td>69%</td><td>55%</td></tr>
+                    <tr><th scope="row">UniDexGrasp (PPO)</th><td>52%</td><td>46%</td><td>40%</td></tr>
+                    <tr><th scope="row">Robot Synesthesia</th><td>33%</td><td>29%</td><td>22%</td></tr>
+                    <tr><th scope="row">Intuitive Closed-Loop</th><td>76%</td><td>71%</td><td>65%</td></tr>
+                    <tr><th scope="row">ContactDexNet</th><td>72%</td><td>68%</td><td>63%</td></tr>
+                    <tr><th scope="row">DexGraspVLA</th><td>69%</td><td>60%</td><td>58%</td></tr>
+                    <tr><th scope="row">UniDexGrasp-CL</th><td>59%</td><td>52%</td><td>46%</td></tr>
+                    <tr><th scope="row">DexDiffuser-VT</th><td>75%</td><td>71%</td><td>57%</td></tr>
+                    <tr class="ours-row"><th scope="row">Ours</th><td><strong>91%</strong></td><td><strong>82%</strong></td><td><strong>83%</strong></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="visual-block">
+              <h3 class="subsection-title">Ablation Studies</h3>
+              <div class="results-table-wrap">
+                <table class="results-table" aria-label="Ablation study success rates">
+                  <thead>
+                    <tr>
+                      <th scope="col">Method</th>
+                      <th scope="col">Seen Objects</th>
+                      <th scope="col">Unseen Objects</th>
+                      <th scope="col">Unseen Categories</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><th scope="row">w/o contact id in adaptation</th><td>84%</td><td>72%</td><td>73%</td></tr>
+                    <tr><th scope="row">w/o contact id in generation</th><td>79%</td><td>75%</td><td>69%</td></tr>
+                    <tr><th scope="row">w/o adaptation</th><td>81%</td><td>78%</td><td>59%</td></tr>
+                    <tr><th scope="row">Object-only</th><td>72%</td><td>67%</td><td>61%</td></tr>
+                    <tr><th scope="row">Full Point Cloud w/o tactile</th><td>78%</td><td>74%</td><td>67%</td></tr>
+                    <tr><th scope="row">w/o PC</th><td>74%</td><td>71%</td><td>64%</td></tr>
+                    <tr class="ours-row"><th scope="row">Ours</th><td><strong>91%</strong></td><td><strong>82%</strong></td><td><strong>83%</strong></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          </div>
+      </section>
+
+      <section class="content-section citation-section" id="citation">
+        <div class="compact-heading">
+          <h2>Citation</h2>
+        </div>
+        <pre><code>@misc{liang2026adadexgraspadaptivedexterousgrasping,
+  title         = {AdaDexGrasp: Adaptive Dexterous Grasping via 3D Visuo-Tactile Representation Fusion},
+  author        = {Xirui Liang and Jiaqi Liang and Jingkai Xu and Yuran Wang and Ruochong Li and Yuanpei Chen and Masayoshi Tomizuka and Wei Zhan and Ruihai Wu},
+  year          = {2026},
+  eprint        = {2608.07600},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  url           = {https://arxiv.org/abs/2608.07600}
+}</code></pre>
+      </section>
+    </main>
+
+  </body>
+</html>
